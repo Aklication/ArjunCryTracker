@@ -1,0 +1,70 @@
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Arjun's Cry Tracker</title>
+          <style>
+              body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f1f1f1;
+                  text-align: center;
+                  padding: 20px;
+                  margin: 0;
+                  height: 100vh;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  box-sizing: border-box;
+              }
+
+              .crying-image {
+                  width: 150px;
+                  height: 150px;
+                  margin: 10px 0;
+              }
+
+              button {
+                  background-color: #4CAF50;
+                  color: white;
+                  font-size: 18px;
+                  border: none;
+                  padding: 12px 24px;
+                  cursor: pointer;
+                  margin: 5px 0;
+              }
+
+              button:active {
+                  background-color: #45a049;
+              }
+
+              .counter {
+                  font-size: 32px;
+                  margin: 10px 0;
+              }
+
+              .time {
+                  font-size: 14px;
+                  margin-top: 10px;
+              }
+
+              .reset {
+                  background-color: red;
+              }
+          </style>
+      </head>
+      <body>
+
+          <h1>Arjun's Cry Tracker</h1>
+          <img src="crying_baby_image.png" alt="Crying Baby" class="crying-image">
+          <div class="counter">Crying Count: <span id="cryCount">0</span></div>
+          <button onclick="increaseCryCount()">Arjun is Crying!</button>
+          <button class="reset" onclick="resetCount()">Reset Count</button>
+          <div class="time">
+              Last reset: <span id="lastResetTime">Never</span>
+          </div>
+
+          <script>
+              let cryCount = 0;
+              const cryCountElement =
